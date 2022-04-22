@@ -14,7 +14,7 @@ jobs:
     steps:
       # 获取代码
       - name: 迁出代码
-        # 使用action库 
+        # 使用action库
         uses: actions/checkout@master
       # 安装Node10
 
@@ -42,12 +42,12 @@ jobs:
           # 私钥 PRIVATE_KEY 要和 仓库的私钥名一致 也就是私钥名也要叫 PRIVATE_KEY
           SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           # SCP参数
-          ARGS: '-avzr --delete'
+          ARGS: "-avzr --delete"
           # 源目录 -- 打包后的文件目录，也就是这个文件会被传到服务器上
-          SOURCE: 'docs/.vuepress/dist/*'
+          SOURCE: "docs/.vuepress/dist/*"
           # 服务器ip
-          REMOTE_HOST: '180.76.231.231'
+          REMOTE_HOST: "180.76.231.231"
           # 用户
-          REMOTE_USER: 'root'
+          REMOTE_USER: "root"
           # 目标地址 -- 上传到服务器的地址
-          TARGET: '/root'
+          TARGET: "/root/front/blog/html"
