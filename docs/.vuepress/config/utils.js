@@ -32,5 +32,4 @@ const getMsg = (path = resolve(__dirname, "../../article")) => {
 function translateDir(path) {
   return path.replace(/\\/g, "/").split("docs")[1].split(".")[0];
 }
-console.log(getMsg()[0].children);
 module.exports = getMsg;
