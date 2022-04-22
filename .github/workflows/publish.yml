@@ -1,0 +1,53 @@
+name: 打包vuepress博客
+
+on:
+  push:
+    # push 代码的时候 哪个分支会受到影响 这里是 main 主分支
+    branches:
+      - main
+
+# 推送之后执行一系列的任务
+jobs:
+  build:
+    # 运行 ubuntu虚拟机系统
+    runs-on: ubuntu-latest
+    steps:
+      # 获取代码
+      - name: 迁出代码
+        # 使用action库 
+        uses: actions/checkout@master
+      # 安装Node10
+
+      - name: 安装node.js
+        # 使用action库  actions/setup-node安装node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.18.0
+
+      - name: 安装yarn
+        run: npm install -g yarn
+
+      # 安装依赖
+      - name: 安装依赖
+        run: yarn
+
+      # 打包
+      - name: 打包
+        run: yarn docs:build
+
+      # 上传到自己的服务器
+      - name: 发布到百度云
+        uses: easingthemes/ssh-deploy@v2.1.1
+        env:
+          # 私钥 PRIVATE_KEY 要和 仓库的私钥名一致 也就是私钥名也要叫 PRIVATE_KEY
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          # SCP参数
+          ARGS: '-avzr --delete'
+          # 源目录 -- 打包后的文件目录，也就是这个文件会被传到服务器上
+          SOURCE: 'docs/.vuepress/dist'
+          # 服务器ip
+          REMOTE_HOST: '180.76.231.231'
+          # 用户
+          REMOTE_USER: 'root'
+          # 目标地址 -- 上传到服务器的地址
+          TARGET: '/root'
