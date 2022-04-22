@@ -44,7 +44,7 @@ jobs:
           # SCP参数
           ARGS: '-avzr --delete'
           # 源目录 -- 打包后的文件目录，也就是这个文件会被传到服务器上
-          SOURCE: 'docs/.vuepress/dist'
+          SOURCE: 'docs/.vuepress/dist/*'
           # 服务器ip
           REMOTE_HOST: '180.76.231.231'
           # 用户
