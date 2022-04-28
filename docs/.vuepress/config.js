@@ -25,5 +25,21 @@ module.exports = {
     extendMarkdown: md => {
       md.use(require("markdown-it-disable-url-encode"));
     }
-  }
+  },
+  plugins: [
+    [
+      '@vuepress/last-updated',
+      {
+        transformer: (timestamp) => {
+          return new Date(timestamp).toLocaleDateString();
+        }
+      }
+    ],
+    [
+      'sitemap',
+      {
+        hostname: 'https://www.seamew.top'
+      }
+    ]
+  ]
 };
