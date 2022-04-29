@@ -1,7 +1,7 @@
 <template>
   <ParentLayout>
     <template #page-bottom>
-      <div class="footer">seamew 版权所有 陕ICP备2022004945号</div>
+      <div class="footer">@2022-2023 seamew 版权所有 <a target="_blank" href="https://beian.miit.gov.cn">陕ICP备2022004945号</a></div>
     </template>
   </ParentLayout>
 </template>
