@@ -6,13 +6,13 @@ module.exports = {
   head: [["link", { rel: "icon", href: "/assets/img/logo.jpg" }]],
   themeConfig: {
     search: true, //展示搜索
-		algolia: {
-			appKey: '',
-			indexName: '',
-			searchParameters: {
-				faeFilters: ['tags:guide,api'],
-			},
-		},
+    algolia: {
+      appKey: "",
+      indexName: "",
+      searchParameters: {
+        faeFilters: ["tags:guide,api"],
+      },
+    },
     logo: "/assets/img/logo.jpg",
     nav,
     sidebar: {
@@ -21,25 +21,25 @@ module.exports = {
     lastUpdated: "Last Updated",
   },
   markdown: {
-    // ......
-    extendMarkdown: md => {
+    extendMarkdown: (md) => {
       md.use(require("markdown-it-disable-url-encode"));
-    }
+    },
   },
   plugins: [
     [
-      '@vuepress/last-updated',
+      "@vuepress/last-updated",
       {
         transformer: (timestamp) => {
           return new Date(timestamp).toLocaleDateString();
-        }
-      }
+        },
+      },
     ],
     [
-      'sitemap',
+      "sitemap",
       {
-        hostname: 'https://www.seamew.top'
-      }
-    ]
-  ]
+        hostname: "https://www.seamew.top",
+      },
+    ],
+    ['@vuepress/back-to-top']
+  ],
 };
