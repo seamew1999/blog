@@ -3,19 +3,26 @@ const nav = require("./config/nav");
 module.exports = {
   title: "seamew的妙妙屋",
   description: "学习开发日常记录",
-  head: [["link", { rel: "icon", href: "/assets/img/logo.jpg" }]],
+  head: [
+    // ["link", { rel: "icon", href: "/assets/img/logo.jpg" }],
+    [
+      "link",
+      {
+        href: "https://cdn.jsdelivr.net/npm/@docsearch/css@3",
+        rel: "stylesheet",
+      },
+      { href: "/assets/img/logo.jpg", rel: "icon" },
+    ],
+    ["script", { src: "https://cdn.jsdelivr.net/npm/@docsearch/js@3" }],
+  ],
   themeConfig: {
     search: true, //展示搜索
     algolia: {
-      // appKey: "",
-      // indexName: "",
-      // searchParameters: {
-      //   faeFilters: ["tags:guide,api"],
-      // },
       apiKey: "a17e60b682b6ef00844bede53e3d9b90",
       indexName: "seamew",
       appId: "A9R9407GEB",
-      debug: false
+      container: '.search-box',
+      debug: false,
     },
     logo: "/assets/img/logo.jpg",
     nav,
