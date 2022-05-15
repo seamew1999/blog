@@ -44,4 +44,4 @@ private static synchronized int nextThreadNum() {
 }
 ```
 
-因为OrderService类也继承了Runnable接口所有这个threadInitNumber变量被初始化了两次。:sweat_smile:
+因为OrderService类也继承了Runnable接口，所以这个threadInitNumber变量被初始化了两次。:sweat_smile:
