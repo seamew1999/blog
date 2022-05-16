@@ -18,9 +18,9 @@ module.exports = {
   themeConfig: {
     search: true, //展示搜索
     algolia: {
-      apiKey: "a17e60b682b6ef00844bede53e3d9b90",
-      indexName: "seamew",
-      appId: "A9R9407GEB",
+      apiKey: "3567df3de577c581e518b8d4d81bff98",
+      indexName: "blog",
+      appId: "46ERBY68LK",
       container: '.search-box',
       debug: false,
     },
