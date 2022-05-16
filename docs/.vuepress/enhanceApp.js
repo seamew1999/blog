@@ -5,9 +5,9 @@ export default ({ router, Vue, isServer }) => {
       setTimeout(() => {
         try {
           docsearch({
-            apiKey: "3567df3de577c581e518b8d4d81bff98",
-            indexName: "blog",
             appId: "46ERBY68LK",
+            apiKey: "310b93c61d634e8884c2ce8337bb8e38",
+            indexName: "blog",
             container: ".search-box",
             debug: false,
           });
