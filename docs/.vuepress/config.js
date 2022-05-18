@@ -18,9 +18,9 @@ module.exports = {
     search: true, //展示搜索
     algolia: {
       appId: "A9R9407GEB",
-      apiKey: "a17e60b682b6ef00844bede53e3d9b90",
+      apiKey: "ec25f908cb82f5a9a57f4f09b58d0ea4",
       indexName: "seamew",
-      container: ".search-box",
+      container: "#search-form",
       debug: false,
     },
     logo: "/assets/img/logo.jpg",
