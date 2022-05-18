@@ -8,11 +8,11 @@ module.exports = {
     [
       "link",
       {
-        href: "https://cdn.jsdelivr.net/npm/@docsearch/css@3",
+        href: "/assets/css/css@3.css",
         rel: "stylesheet",
       },
     ],
-    ["script", { src: "https://cdn.jsdelivr.net/npm/@docsearch/js@3" }],
+    ["script", { src: "/assets/js/js@3.js" }],
   ],
   themeConfig: {
     search: true, //展示搜索
