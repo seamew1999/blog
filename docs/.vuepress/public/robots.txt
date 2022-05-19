@@ -1,0 +1,6 @@
+# Algolia-Crawler-Verif: 8678E2BB327DC280
+
+User-agent: *
+Allow: /
+Sitemap: https://seamew.top/sitemap.xml
+
