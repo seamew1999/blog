@@ -1,6 +1,15 @@
 const nav = [
   { text: "首页", link: "/" },
   {
+    text: "个人作品",
+    items: [
+      {
+        text: "kafka监控",
+        link: "/work/kafka监控.md",
+      },
+    ],
+  },
+  {
     text: "其他网站",
     icon: "reco-message",
     items: [

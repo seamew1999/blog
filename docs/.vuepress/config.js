@@ -26,6 +26,8 @@ module.exports = {
     logo: "/assets/img/logo.jpg",
     nav,
     sidebar: {
+      "/work": "auto",
+      "/assets": getMsg(),
       "/": getMsg(),
     },
     lastUpdated: "Last Updated",

@@ -5,7 +5,7 @@ const { resolve } = path;
 const getMsg = (path = resolve(__dirname, "../../article")) => {
   let res = fs.readdirSync(path).filter(item => !item.includes("assets"));
   if (res.length) {
-    let arr = res.map((item) => {
+    let arr = res.map(item => {
       if (String(item).endsWith(".md")) {
         return { title: item.split(".")[0], path: resolve(path, item) };
       } else {
@@ -16,8 +16,8 @@ const getMsg = (path = resolve(__dirname, "../../article")) => {
         };
       }
     });
-    arr = arr.map((item) => {
-      item.path && (item.path = translateDir(item.path));
+    arr = arr.map(item => {
+      item.path && (item.path = encodeURI(translateDir(item.path)));
       return item;
     });
     return arr;
@@ -32,5 +32,4 @@ const getMsg = (path = resolve(__dirname, "../../article")) => {
 function translateDir(path) {
   return path.replace(/\\/g, "/").split("docs")[1].split(".")[0];
 }
-getMsg();
 module.exports = getMsg;
