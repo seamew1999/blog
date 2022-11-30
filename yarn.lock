@@ -8134,6 +8134,11 @@ vuepress-plugin-container@^2.0.2:
     "@vuepress/shared-utils" "^1.2.0"
     markdown-it-container "^2.0.0"
 
+vuepress-plugin-side-anchor@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.npmmirror.com/vuepress-plugin-side-anchor/-/vuepress-plugin-side-anchor-1.0.6.tgz#49ba344546f322315a4e31a59b54b256dbc3001a"
+  integrity sha512-oITsvBimHDDlKnAtqXFgTyYRMonjVWzR+4aZ2Dx54a4hMrWiXV0e23RTrh/zBzs8hH1QlO5sf/+P734+tfZfjw==
+
 vuepress-plugin-sitemap@^2.3.1:
   version "2.3.1"
   resolved "https://registry.npmmirror.com/vuepress-plugin-sitemap/-/vuepress-plugin-sitemap-2.3.1.tgz#51298aca77a5de96396fdbd1103e1637dd61ae6a"

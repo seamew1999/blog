@@ -31,6 +31,7 @@ module.exports = {
       "/": getMsg(),
     },
     lastUpdated: "Last Updated",
+    sidebarDepth: 0,
   },
   markdown: {
     extendMarkdown: (md) => {
@@ -53,5 +54,6 @@ module.exports = {
       },
     ],
     ["@vuepress/back-to-top"],
+    ["vuepress-plugin-side-anchor"],
   ],
 };

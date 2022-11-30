@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "markdown-it-disable-url-encode": "^1.0.1",
+    "vuepress-plugin-side-anchor": "^1.0.6",
     "vuepress-plugin-sitemap": "^2.3.1"
   }
 }

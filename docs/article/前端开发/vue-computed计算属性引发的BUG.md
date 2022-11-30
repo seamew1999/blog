@@ -63,7 +63,7 @@ export default {
 
 ![](assets/Snipaste_2022-10-07_20-22-05.png)
 
-* 对于test计算属性来说，让我们通过条件运算符判断的时候。因为window.g总是为空，这样就不会走第一步判断valueA的值，所以说vue只有监听到valueB改变的时候才会更新缓存的值
+* 对于test计算属性来说，当我们通过条件运算符判断的时候。因为window.g总是为空，就不会走第一步判断valueA的值，而是一直监听valueB的变化。所以说vue只有监听到valueB改变的时候才会更新缓存的值
 
 ## 解决方法
 
