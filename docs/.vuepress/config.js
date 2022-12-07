@@ -26,9 +26,9 @@ module.exports = {
     logo: "/assets/img/logo.jpg",
     nav,
     sidebar: {
-      "/work": "auto",
-      "/assets": getMsg(),
-      "/": getMsg(),
+      "/work": getMsg("../../work"),
+      "/assets": getMsg("../../article"),
+      "/": getMsg("../../article"),
     },
     lastUpdated: "Last Updated",
     sidebarDepth: 0,
@@ -55,5 +55,6 @@ module.exports = {
     ],
     ["@vuepress/back-to-top"],
     ["vuepress-plugin-side-anchor"],
+    ['@vuepress/medium-zoom']
   ],
 };

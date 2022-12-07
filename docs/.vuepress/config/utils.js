@@ -2,10 +2,11 @@ const fs = require("fs");
 const path = require("path");
 const { resolve } = path;
 
-const getMsg = (path = resolve(__dirname, "../../article")) => {
-  let res = fs.readdirSync(path).filter(item => !item.includes("assets"));
+const getMsg = (relativePath) => {
+  let path = resolve(__dirname, relativePath);
+  let res = fs.readdirSync(path).filter((item) => !item.includes("assets"));
   if (res.length) {
-    let arr = res.map(item => {
+    let arr = res.map((item) => {
       if (String(item).endsWith(".md")) {
         return { title: item.split(".")[0], path: resolve(path, item) };
       } else {
@@ -16,7 +17,7 @@ const getMsg = (path = resolve(__dirname, "../../article")) => {
         };
       }
     });
-    arr = arr.map(item => {
+    arr = arr.map((item) => {
       item.path && (item.path = encodeURI(translateDir(item.path)));
       return item;
     });

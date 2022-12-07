@@ -7,6 +7,10 @@ const nav = [
         text: "kafka监控",
         link: "/work/kafka监控.md",
       },
+      {
+        text: "my-spring",
+        link: "/work/my-spring.md"
+      }
     ],
   },
   {
