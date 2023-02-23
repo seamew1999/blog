@@ -9,10 +9,10 @@ module.exports = {
       "link",
       {
         href: "/assets/css/css@3.css",
-        rel: "stylesheet",
-      },
+        rel: "stylesheet"
+      }
     ],
-    ["script", { src: "/assets/js/js@3.js" }],
+    ["script", { src: "/assets/js/js@3.js" }]
   ],
   themeConfig: {
     search: true, //展示搜索
@@ -21,22 +21,22 @@ module.exports = {
       apiKey: "a17e60b682b6ef00844bede53e3d9b90",
       indexName: "seamew",
       container: "#search-form",
-      debug: false,
+      debug: false
     },
     logo: "/assets/img/logo.jpg",
     nav,
     sidebar: {
       "/work": getMsg("../../work"),
-      "/assets": getMsg("../../article"),
-      "/": getMsg("../../article"),
+      "/article": getMsg("../../article"),
+      "/": getMsg("../../article")
     },
     lastUpdated: "Last Updated",
-    sidebarDepth: 0,
+    sidebarDepth: 0
   },
   markdown: {
     extendMarkdown: (md) => {
       md.use(require("markdown-it-disable-url-encode"));
-    },
+    }
   },
   plugins: [
     [
@@ -44,17 +44,17 @@ module.exports = {
       {
         transformer: (timestamp) => {
           return new Date(timestamp).toLocaleDateString();
-        },
-      },
+        }
+      }
     ],
     [
       "sitemap",
       {
-        hostname: "https://www.seamew.top",
-      },
+        hostname: "https://www.seamew.top"
+      }
     ],
     ["@vuepress/back-to-top"],
     ["vuepress-plugin-side-anchor"],
-    ['@vuepress/medium-zoom']
-  ],
+    ["@vuepress/medium-zoom"]
+  ]
 };
