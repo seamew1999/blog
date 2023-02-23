@@ -15,14 +15,14 @@ jobs:
       # 获取代码
       - name: 迁出代码
         # 使用action库
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
       # 安装Node10
 
       - name: 安装node.js
         # 使用action库  actions/setup-node安装node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: 14.18.0
+          node-version: 16
 
       - name: 安装yarn
         run: npm install -g yarn
@@ -37,7 +37,7 @@ jobs:
 
       # 上传到自己的服务器
       - name: 发布到百度云
-        uses: easingthemes/ssh-deploy@v2.1.1
+        uses: easingthemes/ssh-deploy@main
         env:
           # 私钥 PRIVATE_KEY 要和 仓库的私钥名一致 也就是私钥名也要叫 PRIVATE_KEY
           SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
