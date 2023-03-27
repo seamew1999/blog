@@ -36,7 +36,8 @@ module.exports = {
   markdown: {
     extendMarkdown: (md) => {
       md.use(require("markdown-it-disable-url-encode"));
-    }
+    },
+    lineNumbers: true
   },
   plugins: [
     [
@@ -55,6 +56,13 @@ module.exports = {
     ],
     ["@vuepress/back-to-top"],
     ["vuepress-plugin-side-anchor"],
-    ["@vuepress/medium-zoom"]
+    ["@vuepress/medium-zoom"],
+    [
+      "vuepress-plugin-code-copy",
+      {
+        align: "top",
+        successText: "复制成功"
+      }
+    ]
   ]
 };
