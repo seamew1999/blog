@@ -3,7 +3,7 @@
 ::: tip 关于这个网站~~~
 hello，你们好，我是seamew😁，这个网站是记录学习过程中遇到的BUG和个人博客网站
 
-[本站 github 地址](https://github.com/Sun1040084806/blog)
+[本站 github 地址](https://github.com/seamew1999/blog)
 :::
 
 ## 读书汇
@@ -28,8 +28,8 @@ hello，你们好，我是seamew😁，这个网站是记录学习过程中遇�
 ## 联系我🚲
 
 - [email](mailto:sunhaobo@stu.xidian.edu.cn)
-- [gitee](https://gitee.com/sun1040084806)
-- [github](https://github.com/Sun1040084806)
+- [gitee](https://gitee.com/seamew1999)
+- [github](https://github.com/seamew1999)
 
 
 
