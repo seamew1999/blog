@@ -99,7 +99,7 @@ int getMaxNum(vector<int>& nums, long long target) {
                 break;
             }
             if (j == digits.size() - 1) {
-                digits.resize(digits.size() - 1);
+                res.resize(digits.size() - 1);
             }
         }
         break;
