@@ -83,7 +83,7 @@ public String addUser2(SysUser sysUser) {
 - `json`格式传递日期类型的时候使用`YYYY-MM-DD`，例如`2019-09-09`
 - 表单`（form-data格式）`传递日期类型的时候使用`YYYY/MM/DD`，例如`2019/08/08`
 - 这个是我们没有使用formate的情况，使用formate的话就根据自定义类型传递就可以了。
-- spring boot如果不加任何注解默认使用form-data类型
+- spring boot如果不加任何注解默认使用x-www-form-urlencoded类型
 :::
 
 3. 万能的map

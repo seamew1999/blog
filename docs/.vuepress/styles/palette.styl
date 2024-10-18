@@ -1,8 +1,11 @@
 .side-anchor {
-  top: 10rem;
-  right: 6rem;
   width: 16rem;
   border-left: 0.2rem #2c3e50 solid;
+}
+@media (max-width: 600px) {
+  .side-anchor {
+    display: none;
+  }
 }
 .side-anchor ul li[style] {
     padding-left: 1rem !important;
