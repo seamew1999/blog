@@ -11,7 +11,7 @@
           </p>
         </a>
         <div class="interval">|</div>
-        <a href="mailto:sunhaobo@stu.xidian.edu.cn">@2022-2023 seamew 版权所有</a>
+        <a href="mailto:sunhaobo@stu.xidian.edu.cn">@2022-2025 seamew 版权所有</a>
       </div>
     </template>
   </ParentLayout>
